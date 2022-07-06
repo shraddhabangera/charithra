@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>
+    Basic html tags
+</title>
+    </head>
+    <body>
+<h1>Basic tags</h1>
+<h2>Basic tags2</h2>
+<h3>Basic tags3</h3>
+<h4>Basic tags4</h4>
+<img src="horse.jpg" alt="alive" height="150">
+<h5>Basic tags5</h5> 
+</body>
+<p>Lorem <b>MCA</b> dolor, sit amet <i>VCET</i> consectetur <u>PUTTUR</u>adipisicing elit.<b><i><u>VIVEKANADA</u></i></b> Cumque eius velit voluptas laboriosam, sed, culpa quae praesentium excepturi maxime aut repudiandae libero facilis a vel. Autem odio quibusdam pariatur facilis!
+<strong>VIVEKANDA</strong><em>charithra</em>
+<a href="Second.html">Move to next page</a>
+</p>   </body>
+</html>
