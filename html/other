@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <ol type="I">
+        <li>This is first</li>
+        <li>This is Second</li>
+        <li>This is Third</li>
+    </ol>
+    <ol type="A">
+        <li>This is first</li>
+        <li>This is Second</li>
+        <li>This is Third</li>
+    </ol>
+    <ul>
+        <li>This is first</li>
+        <li>This is Second</li>
+        <li>This is Third</li>
+    </ul>
+    <ul type="circle">
+        <li>This is first</li>
+        <li>This is Second</li>
+        <li>This is Third</li>
+    </ul>
+    <dl>
+    PG COURSES AVAILABLE
+    </dl>
+    <dt>MCA</dt>
+    <dd>This is for two years course.This is a computer application</dd>
+</body>
+</html>
