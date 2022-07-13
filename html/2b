@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol type="1">
+        <li>Summer Season</li>
+        <li>Winter Season</li>
+        <li>Rainy Season</li>
+
+    </ol>
+    <h1>different types of season in a table form</h1>
+    <table border="1">
+        <tr>
+            <td>Nothern hemisphere</td>
+            <td>Range</td>
+            <td>Southern hemisphere</td>
+            <td>Range</td>
+        </tr>
+        <tr>
+            <td>Spring</td>
+            <td>March-1 to May-31</td>
+            <td>Spring</td>
+            <td>Sep-1 to Nov-30</td>
+        </tr>
+        <tr>
+            <td>Summer</td>
+            <td>March-1 to May-31</td>
+            <td>Summer</td>
+            <td>Sep-1 to Nov-30</td>
+        </tr>
+        <tr>
+            <td>Winter</td>
+            <td>March-1 to May-31</td>
+            <td>Winter</td>
+            <td>Sep-1 to Nov-30</td>
+        </tr>
+    </table>
+    <link rel="stylesheet" href="2a.css"/>
+
+</body>
+</html>
