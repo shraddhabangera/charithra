@@ -1,0 +1,80 @@
+alter table MATCHES
+ MODIFY FOREIGN KEY(MAN_OF_THE_MATCH) 
+ REFERENCES PLAYER(PID);
+
+
+
+
+
+
+SELECT COUNT(AUTHOR_ID) FROM BOOK GROUP BY AUTHOR_ID;
++------------------+
+| COUNT(AUTHOR_ID) |
++------------------+
+|                1 |
+|                1 |
+|                1 |
+|                2 |
+|                1 |
++------------------+
+5 rows in set (0.00 sec)
+
+ SELECT COUNT(*),AUTHOR_ID FROM BOOK GROUP BY AUTHOR_ID;
++----------+-----------+
+| COUNT(*) | AUTHOR_ID |
++----------+-----------+
+|        1 | 1         |
+|        1 | 2         |
+|        1 | 3         |
+|        2 | 4         |
+|        1 | 5         |
++----------+-----------+
+5 rows in set (0.00 sec)
+
+IV)
+
+SELECT AUTHOR.AUTHOR_NAME,COUNT(*),BOOK.AUTHOR_ID FROM BOOK,AUTHOR WHERE AUTHOR.AUTHOR_ID=BOOK.AUTHOR_ID GROUP BY AUTHOR_ID;
++-------------------+----------+-----------+
+| AUTHOR_NAME       | COUNT(*) | AUTHOR_ID |
++-------------------+----------+-----------+
+| RAMEZ ELMASRI     |        1 | 1         |
+| BAIDYANATH MYSHRA |        1 | 2         |
+| ELLIS HOROWITZ    |        1 | 3         |
+| DEEPAK KEHAMANI   |        2 | 4         |
+| YUNUS             |        1 | 5         |
++-------------------+----------+-----------+
+5 rows in set (0.01 sec)
+
+V)
+SELECT * FROM STUDENT WHERE USN IN(SELECT USN FROM BORROW WHERE STUDENT.USN=BORROW.USN GROUP BY USN HAVING COUNT(BORROW.USN)=2);;
++------------+---------+-----------+-----------+------+
+| USN        | NAME    | ADDRESS   | BRANCH_ID | SEM  |
++------------+---------+-----------+-----------+------+
+| 4VP21MC044 | HARSH   | UPPALA    | B4        | 4    |
+| 4VP21MC050 | CHARITH | MANGALORE | B2        | 4    |
++------------+---------+-----------+-----------+------+
+2 rows in set (0.00 sec)
+
+
+VI)
+SELECT * FROM STUDENT S  WHERE exists(SELECT BR.USN FROM BORROW BR,BOOK BK WHERE BR.BOOK_ID=BK.BOOK_ID AND BR.USN=S.USN GROUP BY USN HAVING COUNT(DISTINCT AUTHOR_ID)>1);
++------------+---------+-----------+-----------+------+
+| USN        | NAME    | ADDRESS   | BRANCH_ID | SEM  |
++------------+---------+-----------+-----------+------+
+| 4VP21MC044 | HARSH   | UPPALA    | B4        | 4    |
+| 4VP21MC050 | CHARITH | MANGALORE | B2        | 4    |
++------------+---------+-----------+-----------+------+
+2 rows in set (0.00 sec)
+
+viii.List the details of students who borrowed the books which are all published by the same
+publisher.
+
+SELECT * FROM STUDENT S where exists(SELECT USN,PUBLISHER FROM BORROW,BOOK WHERE BORROW.BOOK_ID=BOOK.BOOK_ID AND S.USN=BORROW.USN GROUP BY USN HAVING COUNT(DISTINCT PUBLISHER)=1);
+
+
+
+
+ CREATE TABLE STUDENT(USN VARCHAR(20)PRIMARY KEY,NAME VARCHAR(25),DATE_BIRTH DATE,BRANCH VARCHAR(20),MARK1 INT,MARK2 INT,MARK3 INT,TOTAL
+ INT,GPA INT);
+
+INSERT INTO STUDENT(USN,NAME,DATE_BIRTH,BRANCH) VALUES('4VP21MC012','ANISH','01-04-2000','MCA');
